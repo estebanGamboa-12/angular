@@ -1,0 +1,10 @@
+<div>
+<p>Libros</p>
+<p>Ingrese un libro :<input type="text" [(ngModel)]="inputValue" placeholder="Ingresa un valor" (input)="mostrarEnTiempoReal()"></p>
+<p>Valor ingresado en tiempo real: {{ resultadoEnTiempoReal }}</p>
+<app-boton (valorAñadido)="recibirDatos($event)"></app-boton>
+
+<div *ngFor="let valor of  inputValue">
+    <p>{{valor}}</p>
+</div>
+</div>
