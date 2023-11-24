@@ -1,0 +1,11 @@
+<div>
+<p>Socios</p>
+<p>Ingrese codigo :<input type="text" [(ngModel)]="inputValue" (input)="mostrar($event)"></p>
+<p>Código : {{inputValue}}</p>
+<app-boton (agregarElemento)="agregarSocios()"></app-boton>
+<div>
+    <ul>
+        <li *ngFor="let socios of listaSocios">{{socios}}</li>
+    </ul>
+</div>
+</div>

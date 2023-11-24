@@ -8,9 +8,13 @@ import { Component } from '@angular/core';
 export class SociosComponent {
 
   inputValue:String='';
-  resultado:String='';
-  mostrar(){
-    this.resultado=this.inputValue
+  listaSocios:String[]=[];
+ 
+  mostrar(event:any):void{
+    this.inputValue=event.target.value
+  }
+  agregarSocios():void{
+    this.listaSocios.push(this.inputValue);
   }
 
 }

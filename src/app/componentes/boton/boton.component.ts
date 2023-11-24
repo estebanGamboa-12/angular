@@ -1,16 +1,14 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boton',
   templateUrl: './boton.component.html',
-  styleUrl: './boton.component.css'
+  styleUrls: ['./boton.component.css']
 })
 export class BotonComponent {
+  @Output() agregarElemento = new EventEmitter<void>();
 
-  @Output() valorAñadido = new EventEmitter<string>();
-
-  añadirValor() {  
-    this.valorAñadido.emit(nuevoValor);
+  onAgregarElemento(): void {
+    this.agregarElemento.emit();
   }
-
 }

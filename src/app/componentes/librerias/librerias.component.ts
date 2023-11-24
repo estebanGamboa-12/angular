@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class LibreriasComponent {
 
   inputValue:String='';
-  resultadoEnTiempoReal:String='';
-  libros:String[]=[]
-  mostrarEnTiempoReal(){
-    this.resultadoEnTiempoReal=this.inputValue;
+  listaLibros:String[]=[];
+
+  mostrar(event:any):void{
+    this.inputValue=event.target.value;
   }
-  recibirDatos(dato:String){
-    this.libros.push(dato);
+  agregarLibros():void{
+    this.listaLibros.push(this.inputValue);
   }
+ 
 }
